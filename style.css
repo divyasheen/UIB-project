@@ -1,0 +1,174 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #a00000;
+    color: white;
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.profile h1, .profile h2 {
+    margin: 5px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 80px;
+}
+
+nav ul li {
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.contact {
+    margin-top: auto;
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: auto;
+    font-weight: bold;
+}
+
+.icons a {
+    margin-bottom: auto;
+    margin-left: 10px;
+    color: white;
+    font-size: 1.5em;
+}
+.icons a:hover {
+    animation: fadeEffect .5s;
+}
+
+/* Content Styles */
+.content {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+.frontend-development {
+    margin-bottom: 40px;
+}
+
+.frontend-development h2 {
+    margin-bottom: 20px;
+}
+h2 {
+    color: #a00000;
+}
+
+.frontend-development p, ul {
+    line-height: 1.8;
+}
+
+.frontend-development ul li {
+    margin-bottom: 10px;
+}
+/* Tabcontent Styles - hide all by default */
+.tabcontent {
+    display: none;
+   
+}
+.sidebar nav ul li :hover {
+    animation: fadeEffect .5s; /* Adding fade effect */
+}
+
+/* Only show the section that is targeted */
+:target {
+    display: block;
+}
+
+/* Show the first tab content by default (in case no hash is in the URL) */
+body:not(:has(:target)) #about {
+    display: block;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+.contact-info a {
+    color:  #a00000;
+    text-decoration: none;
+   
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+.contact-info .fa-solid, .fa-brands {
+    margin-right: 10px;
+}
+/* Project Section */
+.project, .project2 {
+    background-color: white;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.project h2, .project2 h2 {
+    color: #d9534f;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project p, .project2 p {
+    margin-bottom: 10px;
+}
+
+.project ul, .project2 ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.project-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.project2{
+    margin-top: 15px;
+}
+
