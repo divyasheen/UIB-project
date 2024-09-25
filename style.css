@@ -6,39 +6,51 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto Mono", monospace;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: white;
 }
 
 /* Container Layout */
 .container {
     display: flex;
     min-height: 100vh;
+    min-width: 100vw;
 }
 
 /* Sidebar Styles */
-.sidebar {
-    background-color: #a00000;
-    color: white;
+.sidebar {    
+    color: #706969;
     padding: 20px;
     width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-image: url('images/image.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-blend-mode: difference;
+    background-color:  rgba(197, 17, 17, 0.8); 
+    
 }
 
 .profile img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
+    animation: bounce 2s ease infinite;
 }
-
-.profile h1, .profile h2 {
-    margin: 5px 0;
+@keyframes bounce {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
 }
-
 nav ul {
     list-style: none;
     margin-top: 80px;
@@ -46,13 +58,14 @@ nav ul {
 
 nav ul li {
     margin-bottom: 30px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 nav ul li a {
-    color: white;
+    color: #706969;
     text-decoration: none;
     font-size: 1.1em;
+    font-weight: bold;
 }
 
 .contact {
@@ -68,10 +81,11 @@ nav ul li a {
 .icons a {
     margin-bottom: auto;
     margin-left: 10px;
-    color: white;
+    color: #353333;
     font-size: 1.5em;
 }
 .icons a:hover {
+    color: #a00000;
     animation: fadeEffect .5s;
 }
 
@@ -81,9 +95,8 @@ nav ul li a {
     padding: 40px;
     background-color: white;
 }
-
-.frontend-development {
-    margin-bottom: 40px;
+.content ul li {
+    list-style-type: square;
 }
 
 .frontend-development h2 {
@@ -91,7 +104,19 @@ nav ul li a {
 }
 h2 {
     color: #a00000;
+    animation: bounce-in-right 2s ease ;
 }
+@keyframes bounce-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(-10px);
+    }
+    100% { transform: translateX(0); }
+  }
 
 .frontend-development p, ul {
     line-height: 1.8;
@@ -106,9 +131,13 @@ h2 {
    
 }
 .sidebar nav ul li :hover {
+    color: beige;
     animation: fadeEffect .5s; /* Adding fade effect */
 }
-
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 /* Only show the section that is targeted */
 :target {
     display: block;
@@ -119,10 +148,7 @@ body:not(:has(:target)) #about {
     display: block;
 }
 
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
+
 
 
 
@@ -146,11 +172,19 @@ body:not(:has(:target)) #about {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 8px rgba(245, 7, 7, 1);
 }
+.project:hover, .project2:hover {
+    animation: fade-in 1s linear;
+
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 
 .project h2, .project2 h2 {
-    color: #d9534f;
+    color: #290302;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -161,7 +195,7 @@ body:not(:has(:target)) #about {
 
 .project ul, .project2 ul {
     margin-left: 20px;
-    list-style-type: disc;
+    list-style-type: square;
 }
 
 .project-image img {
@@ -170,5 +204,9 @@ body:not(:has(:target)) #about {
 }
 .project2{
     margin-top: 15px;
+}
+#about a, #portfolio a {
+    color: #a00000;
+    text-decoration: none;
 }
 

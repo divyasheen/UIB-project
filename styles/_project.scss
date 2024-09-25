@@ -1,0 +1,33 @@
+/* Project Section */
+.project, .project2 {
+    background-color: white;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(216, 5, 5, 0.8);
+    :hover {
+        animation: fade-in 1s linear;
+    
+    }
+    h2 {
+        color: #290302;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    ul {
+        margin-left: 20px;
+        list-style-type: square;
+    }
+}
+.project-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.project2{
+    margin-top: 15px;
+}

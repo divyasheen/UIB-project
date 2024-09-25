@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*-----imports-----*/
+@import "body";
+@import "sidebar";
+@import "keyframes";
+@import "content";
+@import "contact-info";
+@import "project";
+
+#about a, #portfolio a {
+    color: #a00000;
+    text-decoration: none;
+}
