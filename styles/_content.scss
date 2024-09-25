@@ -1,0 +1,21 @@
+/* Content Styles */
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: white;
+  ul li {
+    list-style-type: square;
+}
+}
+
+.frontend-development {
+  h2 {
+    margin-bottom: 20px;
+  }
+  p, ul {
+    line-height: 1.8;
+  }
+  ul li {
+    margin-bottom: 10px;
+}
+}

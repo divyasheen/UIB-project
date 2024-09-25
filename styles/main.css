@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*-----imports-----*/
+body {
+  font-family: "Roboto Mono", monospace;
+  color: #333;
+  background-color: white;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/* Only show the section that is targeted */
+:target {
+  display: block;
+}
+
+/* Show the first tab content by default (in case no hash is in the URL) */
+#about {
+  display: block;
+}
+
+section:not(:target) {
+  display: none;
+}
+
+body:not(:has(:target)) #about {
+  display: block;
+}
+
+h2 {
+  color: #a00000;
+  animation: bounce-in-right 2s ease;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  color: #706969;
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("../images/image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: difference;
+  background-color: rgba(197, 17, 17, 0.8);
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin-top: 80px;
+}
+.sidebar nav ul li {
+  margin-bottom: 30px;
+  margin-left: 5px;
+}
+.sidebar nav ul li a {
+  color: #706969;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.sidebar nav ul li :hover {
+  color: beige;
+  animation: fadeEffect 0.5s;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: bounce 2s ease infinite;
+}
+
+.contact {
+  margin-top: auto;
+  text-align: center;
+}
+.contact p {
+  margin-bottom: auto;
+  font-weight: bold;
+}
+
+.icons a {
+  margin-bottom: auto;
+  margin-left: 10px;
+  color: #353333;
+  font-size: 1.5em;
+}
+.icons a :hover {
+  color: #a00000;
+  animation: fadeEffect 0.5s;
+}
+
+@keyframes bounce {
+  70% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-7%);
+  }
+  97% {
+    transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Content Styles */
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: white;
+}
+.content ul li {
+  list-style-type: square;
+}
+
+.frontend-development h2 {
+  margin-bottom: 20px;
+}
+.frontend-development p, .frontend-development ul {
+  line-height: 1.8;
+}
+.frontend-development ul li {
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #a00000;
+  text-decoration: none;
+}
+.contact-info a :hover {
+  text-decoration: underline;
+}
+
+.contact-info .fa-solid, .fa-brands {
+  margin-right: 10px;
+}
+
+/* Project Section */
+.project, .project2 {
+  background-color: white;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(216, 5, 5, 0.8);
+}
+.project :hover, .project2 :hover {
+  animation: fade-in 1s linear;
+}
+.project h2, .project2 h2 {
+  color: #290302;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.project p, .project2 p {
+  margin-bottom: 10px;
+}
+.project ul, .project2 ul {
+  margin-left: 20px;
+  list-style-type: square;
+}
+
+.project-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.project2 {
+  margin-top: 15px;
+}
+
+#about a, #portfolio a {
+  color: #a00000;
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */

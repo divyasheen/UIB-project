@@ -1,0 +1,58 @@
+/* Sidebar Styles */
+.sidebar {    
+    color: #706969;
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url('../images/image.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-blend-mode: difference;
+    background-color:  rgba(197, 17, 17, 0.8); 
+}
+.sidebar nav ul {
+    list-style: none;
+    margin-top: 80px;
+    li {
+        margin-bottom: 30px;
+        margin-left: 5px;
+        a {
+            color: #706969;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    }
+}
+.sidebar nav ul li :hover {
+    color: beige;
+    animation: fadeEffect .5s; 
+}
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: bounce 2s ease infinite;
+}
+.contact {
+    margin-top: auto;
+    text-align: center;
+    p {
+        margin-bottom: auto;
+        font-weight: bold;
+    }
+}
+.icons a {
+    margin-bottom: auto;
+    margin-left: 10px;
+    color: #353333;
+    font-size: 1.5em;
+    :hover {
+        color: #a00000;
+        animation: fadeEffect .5s;
+    }
+}
